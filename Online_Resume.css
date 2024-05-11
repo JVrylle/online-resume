@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+}
+
+body {
+    background: gray;
+}
+.container {
+    background: whitesmoke;
+    max-width: 800px;
+    margin: 60px auto;
+    height: 1250px;
+    padding: 20px;
+    box-shadow: 0 2px 20px grey;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.img-area {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px auto;
+    border: 8px solid #E3E2DC;
+    /* dotted, dashed, solid, double, groove, ridge, inset, outset, none, and hidden */
+}
+
+.img-area img {
+    width: 100%;
+}
+
+.main{
+    display:flex;
+    flex-wrap: wrap ;
+}
+
+.left {
+    flex: 1;
+    padding: 10px;
+}
+.left p{
+    line-height: 1.7;
+    margin-left: 50px;
+}
+.left ul li {
+    line-height: 1.5;
+    margin-left: 50px;
+}
+.left ul{
+    list-style-type:square;
+}
+
+h2 {
+    background: #2F3237;
+    padding: 15px;
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    border-radius: 0 50px 50px 0;
+}
+
+.right h2 {
+    border-radius: 50px 0px 0px 50px;
+    text-align: right;
+}
+
+.right {
+    flex: 1;
+    padding: 10px;
+}
+
+.right h3 {
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.right p {
+    line-height: 2.9;
+}
+
+.right ul li {
+    line-height: 1.8;
+    margin-left: 60px;
+}
+
+.right ul {
+    list-style-type:circle;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+    }
+    h2 {
+        font-size: 15px;
+    }
+}
